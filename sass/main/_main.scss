@@ -1,0 +1,348 @@
+@use "../mixin.scss";
+
+.main_estilo {
+    font-family: "Times New Roman", Times, serif;
+}
+
+// Main inicio
+@import 'main__inicio/seccion_titulo';
+@import 'main__inicio/seccion_informacion__main';
+@import 'main__inicio/seccion_carousel';
+
+//Main productos
+
+.titulo--productos {
+    @include mixin.titulo();
+}
+
+.div__texto--producto {
+width: 50%;
+    p {
+        font-size: 18px;
+    }
+}
+
+.section--producto {
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 2px solid mixin.$coloNegro;
+
+    .section--titulo {
+        color: mixin.$coloNegro;
+        font-size: 60px;
+    }
+
+    .section--contenedor {
+        display: flex;
+        flex-flow: row nowrap;
+
+        .section__contenedor--imagen {
+            background-color: mixin.$coloNegro;
+            border: 1px solid mixin.$coloNegro;
+            width: 330px;
+            height: 620px;
+            margin: 50px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            align-items: center;
+            transition: all 1s;
+
+            .section__contenedor--tiutlo {
+                width: 80%;
+                height: 100px;
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+                justify-content: center;
+
+                p {
+                    color: mixin.$colorBlanco;
+                    font-size: 20px;
+                }
+            }
+
+            img {
+                width: 300px;
+                height: 350px;
+            }
+
+            .comprar {
+                text-decoration: none;
+                padding: 15px 35px;
+                color: mixin.$colorBlanco;
+                border: 2px solid mixin.$colorBlanco;
+                border-radius: 50px;
+                text-transform: uppercase;
+
+                &:hover {
+                    background-color: mixin.$colorBlanco;
+                    color: mixin.$coloNegro;
+                    border: 2px solid rgb(49, 49, 49);
+                }
+            }
+
+            .agregarCarrito {
+                text-decoration: none;
+                color: mixin.$colorBlanco;
+
+                &:hover {
+                    font-size: 15px;
+                }
+            }
+
+            &:hover {
+                box-shadow: 5px 5px 20px rgba(0, 0, 0, 4);
+                transform: translateY(-3%);
+            }
+        }
+    }
+
+    .section--verMas {
+        @include mixin.botonEstilos();
+        padding: 22px 50px;
+        text-decoration: none;
+        color: mixin.$colorBlanco;
+
+        a {
+            text-decoration: none;
+            color: mixin.$colorBlanco;
+        }
+
+        &:hover {
+            @include mixin.cambioColor();
+
+            a {
+                color: mixin.$coloNegro;
+            }
+        }
+    }
+}
+
+.section__producto--bilbioteca {
+    border: none;
+}
+
+
+
+
+
+//Main ubicación
+.contenedor__ubicacion {
+    @include mixin.flexPosicionUbicacion();
+
+    h1 {
+        @include mixin.titulo();
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .contenedor__ubicacion {
+        @include mixin.flexPosicionUbicacion();
+        margin: 40px;
+
+        .ubicacion__titulo {
+            font-size: 45px;
+        }
+
+        .contenedor-frases {
+            display: flex;
+        }
+    }
+}
+
+.contenedor__ubicacion--contacto {
+    @include mixin.botonEstilos();
+    padding: 22px 25px;
+
+    a {
+        text-decoration: none;
+        color: mixin.$colorBlanco;
+    }
+
+    &:hover {
+        @include mixin.cambioColor();
+
+        a {
+            color: mixin.$coloNegro;
+        }
+    }
+}
+
+
+
+
+
+//Main contacto
+.contenedor__contacto {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    .titulo {
+        @include mixin.titulo();
+    }
+
+    a {
+        color: mixin.$coloNegro;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    form {
+        width: 50%;
+        height: 600px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .contenedor__contacto--formulario {
+            width: 100%;
+
+            .contenedor__contacto__formulario--active {
+                padding: 15px;
+                width: 100%;
+                font-size: 18px;
+                border: 1px solid rgba(4, 4, 4, 0.14);
+                border-radius: 50px;
+                appearance: none;
+                color: #040404;
+                background-color: rgb(241, 241, 241);
+            }
+
+            .textarea {
+                border-radius: 30px;
+                height: 100px;
+            }
+        }
+
+        .enviar {
+            @include mixin.botonEstilos();
+            padding: 22px 50px;
+            text-decoration: none;
+            color: mixin.$colorBlanco;
+
+            &:hover {
+                @include mixin.cambioColor();
+                color: mixin.$coloNegro;
+            }
+        }
+    }
+}
+
+.contenedor__footer {
+    position: relative;
+    bottom: 80px;
+}
+
+
+
+
+
+//Main Preguntas Freceuntes
+.seccion__preguntasFrecuentes {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    padding: 80px;
+
+    ul {
+        li {
+            list-style-type: disc;
+        }
+    }
+
+    .section__preguntasFrecuentes__preguntas--active {
+        margin-bottom: 60px;
+    }
+
+    .titulo__h2 {
+        color: mixin.$coloNegro;
+    }
+
+    .contenedor__titulo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 100px;
+
+        .titulo {
+            @include mixin.titulo();
+        }
+    }
+
+    .seccion__preguntasFrecuentes--pagos {
+        @include mixin.preguntaFrecuentesAtributos();
+
+        .section__preguntasFrecuentes__pagos--pregunta {
+            width: 60%;
+        }
+    }
+
+    .section__preguntasFrecuentes__polEnvios {
+        @include mixin.preguntaFrecuentesAtributos();
+
+        .section__preguntasFrecuentes__polEnvios--preguntas {
+            width: 60%;
+        }
+    }
+
+    .section__preguntasFrecuentes--cambios {
+        @include mixin.preguntaFrecuentesAtributos();
+
+        p {
+            width: 80%;
+
+            span {
+                position: relative;
+                top: 30px;
+            }
+        }
+    }
+}
+
+
+
+
+
+//Main escritorio
+.section__productos__contenedor__escritorio__biblioteca {
+
+    h1 {
+        @include mixin.titulo();
+    }
+
+    .div__escritorio__biblioteca--texto {
+        width: 70%;
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .contenedor__producto--escritorio--biblioteca {
+        width: 90%;
+
+        img {
+            width: 100%;
+            height: 350px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+}
+
+.contenedor__footer--pagEscritorio--biblioteca {
+    position: relative;
+    top: 50px;
+}

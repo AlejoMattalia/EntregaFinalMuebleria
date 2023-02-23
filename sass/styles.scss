@@ -1,0 +1,43 @@
+@use 'mixin.scss';
+@use 'main/main';
+@use 'mediaQ.scss';
+
+//HEADER
+header {
+    .logo {
+        @include mixin.logo;
+    }
+
+    .ol--breadcrumb {
+        height: 40px;
+        li {
+            color: #fff;
+            list-style-type: disc;
+
+            a {
+                text-decoration: none;
+                color: #3f3f3f;
+
+                &:hover{
+                    color: #fff;
+                }
+            }
+
+            .pagina-ubicada {
+                text-decoration: none;
+                color: #d8d8d8;
+            }
+        }
+    }
+
+}
+
+//FOOTER
+@media (min-width:300px) and (max-width:444px) {
+    .footer {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+}

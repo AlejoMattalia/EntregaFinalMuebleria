@@ -1,0 +1,152 @@
+@use '../../mixin';
+
+@mixin flexPosicion(){
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+@mixin posicionFrases(){
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center; 
+}
+
+@mixin tamañoCajaTotal{
+    width: 380px;
+    height: 200px;
+}
+
+@mixin tamañoTablaTablet(){
+    width: 100%;
+    height: 170px;
+}
+
+@mixin iconoEstilos(){
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 23px;
+    width: 40px;
+    height: 40px; 
+    line-height: 40px;  
+    text-align: center;
+    background-color: #314652;
+    color: #fff;
+    border-radius: 50%;
+}
+
+
+.seccion_informacion{
+    width: 100%;
+    background: radial-gradient(#d7d2cc,#304352,);
+    @include flexPosicion();
+
+    .h2__titulo{
+        font-size: 20px;
+    }
+
+    .princiapl__seccion__tarjeta{
+        @include tamañoCajaTotal();
+        @include flexPosicion();
+        border-right: mixin.$borde;
+
+        .principal__seccion__tarjeta--icono{
+            @include iconoEstilos();
+        }
+        .principal__texto__tarjeta--frases{
+            @include posicionFrases();
+        }
+    }
+
+    .princiapl__seccion__carrito{
+        @include tamañoCajaTotal();
+        @include flexPosicion();
+        border-left: mixin.$borde;
+        border-right: mixin.$borde;
+
+        .principal__seccion__carrito--icono{
+            @include iconoEstilos();
+        }
+
+        .principal__texto__carrito--frases{
+            @include posicionFrases();
+        }
+    }
+
+    .princiapl__seccion__candado{
+        @include tamañoCajaTotal();
+        @include flexPosicion();
+        border-left: mixin.$borde;
+
+        .principal__seccion__candado--icono{
+            @include iconoEstilos();
+        }
+
+        .principal__texto__candado--frases{
+            @include posicionFrases();
+        }
+    }
+}
+
+@media (min-width:768px) and (max-width:1034px){
+    .seccion_informacion{
+        .h2__titulo{
+            font-size: 16px;
+        }
+        
+    }
+}
+
+@media (min-width:480px) and (max-width:768px){
+    .seccion_informacion{
+        display: flex;
+        flex-flow: column wrap;
+        
+        .princiapl__seccion__tarjeta{
+            margin-top: 30px;
+            border: mixin.$borde;
+        }
+
+        .princiapl__seccion__carrito{
+            border: mixin.$borde;
+        }
+
+        .princiapl__seccion__candado{
+            margin-bottom: 30px;
+            border: mixin.$borde;
+        }
+
+    }
+}
+
+$tamañoSecciones: 280px;
+
+@media (min-width:300px) and (max-width:480px){
+    .seccion_informacion{
+        display: flex;
+        flex-flow: column wrap;
+
+        .h2__titulo{
+            font-size: 16px;
+        }
+        
+        .princiapl__seccion__tarjeta{
+            width: $tamañoSecciones;
+            margin-top: 30px;
+            border: mixin.$borde;
+        }
+
+        .princiapl__seccion__carrito{
+            width: $tamañoSecciones;
+            border: mixin.$borde;
+        }
+
+        .princiapl__seccion__candado{
+            width: $tamañoSecciones;
+            margin-bottom: 30px;
+            border: mixin.$borde;
+        }
+
+    }
+}

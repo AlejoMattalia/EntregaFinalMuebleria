@@ -1,0 +1,65 @@
+@use '../../mixin';
+
+.seccion_titulo{
+    background: linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75)), url("../img/casa.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-flow:column wrap;
+    justify-content: center;
+    align-content: center;
+
+    h1{
+        font-size: 120px;
+        color: #fff;
+    }
+
+    .pricipal__caja__enlace{
+        display: grid;
+        place-items: center; 
+
+        .principal__enlace--producto{
+            @include mixin.enlacesEstilo();
+        }
+        .principal__enlace--producto:hover{
+            @include mixin.neon();
+        }
+
+        .principal__enlace--contacto{
+            @include mixin.enlacesEstilo();
+        }
+        .principal__enlace--contacto:hover{
+            @include mixin.neon();
+        }
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px){
+    .seccion_titulo{
+        h1{
+            font-size: 90px;
+        }
+    }
+}
+
+@media (min-width:480px) and (max-width:768px){
+    .seccion_titulo{
+        h1{
+            font-size: 70px;
+        }
+    }
+}
+
+@media (min-width:300px) and (max-width:480px){
+    .seccion_titulo{
+        h1{
+            font-size: 45px;
+        }
+
+        .pricipal__caja__enlace{
+            font-size: 13px;
+        }
+    }
+}

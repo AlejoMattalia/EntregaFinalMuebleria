@@ -1,0 +1,69 @@
+$borde: 1px solid #000;
+$colorBlanco: #fff;
+$coloNegro: #000;
+
+@mixin neon() {
+    background: #252525;
+    box-shadow: 0 0 10px #252525, 0 0 40px #252525, 0 0 80px #252525;
+}
+
+@mixin cambioColor() {
+    background-color: #fff;
+    border: 3px solid #000;
+    transform: translateY(5px);
+}
+
+@mixin titulo() {
+    font-size: 90px;
+    font-weight: bold;
+}
+
+@mixin enlacesEstilo() {
+    text-decoration: none;
+    display: inline-block;
+    margin: 25px;
+    padding: 22px 25px;
+    border: 2px solid $colorBlanco;
+    border-radius: 50px;
+    color: $colorBlanco;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+@mixin botonEstilos() {
+    background-color: black;
+    border-radius: 50px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    transition: 0.5s;
+}
+
+@mixin logo() {
+    margin: 10px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+@mixin posicionamiento($left, $top) {
+    position: relative;
+    left: $left;
+    top: $top;
+}
+
+@mixin flexPosicionUbicacion() {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin preguntaFrecuentesAtributos() {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 80px;
+    color: rgb(90, 90, 90);
+}

@@ -1,0 +1,150 @@
+@use '../../mixin';
+
+$colorFondo: #000;
+$margin: 50px;
+$borde: 10px solid #000;
+
+@mixin poscionEnlace {
+    position: relative;
+    bottom: 10px;
+}
+
+@mixin tamañoCarousel() {
+    width: 500px;
+    height: 600px;
+}
+
+@mixin posicionamineto__enlaces__productos() {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+
+.contenedor__carousel {
+    background-color: #fff;
+    padding: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+
+    .imagenes {
+        height: 450px;
+    }
+
+    .carousel__1 {
+        margin: $margin;
+        background-color: $colorFondo;
+        border: $borde;
+        @include tamañoCarousel();
+        @include posicionamineto__enlaces__productos();
+
+        .enlace__escritorio {
+            @include mixin.enlacesEstilo();
+            @include poscionEnlace();
+
+            &:hover {
+                @include mixin.neon();
+            }
+        }
+    }
+
+    .carousel__2 {
+        margin: $margin;
+        background-color: $colorFondo;
+        border: $borde;
+        @include tamañoCarousel();
+        @include posicionamineto__enlaces__productos();
+
+        .enlace__biblioteca {
+            @include mixin.enlacesEstilo();
+            @include poscionEnlace();
+        }
+
+        .enlace__biblioteca:hover {
+            @include mixin.neon();
+        }
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+    .contenedor__carousel {
+        background-color: #fff;
+        padding: 50px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width:480px) and (max-width:768px) {
+    .contenedor__carousel {
+        background-color: #fff;
+        padding: 50px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+
+        .imagenes {
+            height: 400px;
+        }
+
+        .carousel__1 {
+            width: 400px;
+            height: 560px;
+
+            .enlace__escritorio {
+                position: relative;
+                bottom: 0;
+            }
+        }
+
+        .carousel__2 {
+            width: 400px;
+            height: 560px;
+
+            .enlace__biblioteca {
+                position: relative;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+@media (min-width:300px) and (max-width:480px) {
+    .contenedor__carousel {
+        background-color: #fff;
+        padding: 50px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+
+        .imagenes {
+            height: 300px;
+        }
+
+        .carousel__1 {
+            width: 280px;
+            height: 480px;
+
+            .enlace__escritorio {
+                font-size: 13px;
+                position: relative;
+                top: 10px;
+            }
+        }
+
+        .carousel__2 {
+            width: 280px;
+            height: 480px;
+
+            .enlace__biblioteca {
+                font-size: 13px;
+                position: relative;
+                top: 10px;
+            }
+        }
+    }
+}

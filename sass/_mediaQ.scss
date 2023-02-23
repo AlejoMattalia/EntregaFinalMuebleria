@@ -1,0 +1,373 @@
+@media (min-width: 768px) and (max-width:1024px) {
+
+    //Media pagina Contacto
+    .contenedor__contacto {
+        form {
+            width: 60%;
+        }
+    }
+
+
+    //Media pagina Preguntas Frecuentes
+    .seccion__preguntasFrecuentes {
+
+        .contenedor__titulo {
+            .titulo {
+                font-size: 75px;
+            }
+        }
+
+        .seccion__preguntasFrecuentes--pagos {
+
+            .section__preguntasFrecuentes__pagos--pregunta {
+                width: 75%;
+            }
+        }
+
+        .section__preguntasFrecuentes__polEnvios {
+
+            .section__preguntasFrecuentes__polEnvios--preguntas {
+                width: 75%;
+            }
+        }
+
+        .section__preguntasFrecuentes--cambios {
+
+            p {
+                width: 80%;
+            }
+        }
+    }
+
+
+    //Media pagina escritorio y biblioteca
+    .section__productos__contenedor__escritorio__biblioteca {
+
+        .div__escritorio__biblioteca--texto {
+            width: 80%;
+        }
+
+        .contenedor__producto--escritorio--biblioteca {
+            width: 90%;
+
+            img {
+                width: 100%;
+                height: 250px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
+
+
+@media (min-width: 480px) and (max-width:768px) {
+
+    //Media pagina Contacto
+    .contenedor__contacto {
+        form {
+            width: 70%;
+        }
+    }
+
+
+    //Media pagina productos
+    .section__producto--tiutlos--parrafo{
+        .div__texto--producto{
+            width: 70%;
+        }
+    }
+    .section--producto {
+        .section--contenedor {
+            display: flex;
+            flex-flow: column nowrap;
+
+            .section__contenedor--imagen:hover {
+                box-shadow: none;
+                transform: none;
+            }
+        }
+    }
+
+
+    //Media pagina Preguntas Frecuentes
+    .seccion__preguntasFrecuentes {
+
+        .contenedor__titulo .titulo {
+            font-size: 70px;
+        }
+
+
+        .seccion__preguntasFrecuentes--pagos {
+
+            .section__preguntasFrecuentes__pagos--pregunta {
+                width: 100%;
+            }
+        }
+
+        .section__preguntasFrecuentes__polEnvios {
+
+            .section__preguntasFrecuentes__polEnvios--preguntas {
+                width: 100%;
+            }
+        }
+
+        .section__preguntasFrecuentes--cambios {
+
+            p {
+                width: 100%;
+            }
+        }
+    }
+
+
+    //Media pagina escritorio y biblioteca
+    .section__productos__contenedor__escritorio__biblioteca {
+
+        .div__escritorio__biblioteca--texto {
+            width: 80%;
+        }
+
+        .contenedor__producto--escritorio--biblioteca {
+            width: 60%;
+
+            img {
+                width: 100%;
+                height: 60%;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
+
+
+@media (min-width: 300px) and (max-width:480px) {
+
+    //Media pagina Contacto
+    .contenedor__contacto {
+        .titulo {
+            font-size: 70px;
+        }
+
+        form {
+            width: 80%;
+        }
+
+        .enviar {
+            font-size: 12px;
+        }
+    }
+
+
+    //Media pagina Productos
+    .section__producto--tiutlos--parrafo{
+        width: 100%;
+        h1{
+            font-size: 70px;
+        }
+        .div__texto--producto{
+            width: 90%;
+        }
+    }
+    .section--producto {
+
+        .section--titulo {
+            font-size: 40px;
+        }
+
+        .section--contenedor {
+            display: flex;
+            flex-flow: column nowrap;
+
+            .section__contenedor--imagen {
+                width: 250px;
+                height: 500px;
+                margin: 50px;
+
+                &:hover {
+                    box-shadow: none;
+                    transform: none;
+                }
+
+                .section__contenedor--tiutlo {
+                    display: flex;
+                    flex-flow: column nowrap;
+
+                    p {
+                        font-size: 18px;
+                    }
+                }
+
+                img {
+                    width: 230px;
+                    height: 250px;
+                }
+
+                .comprar {
+                    font-size: 15px;
+                }
+
+                .agregarCarrito {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+
+    //Media pagina Pregunta Frecuentes
+    .seccion__preguntasFrecuentes {
+        padding: 0%;
+        display: flex;
+        align-items: center;
+
+        .contenedor__titulo {
+            margin-top: 60px;
+
+            .titulo {
+                font-size: 50px;
+            }
+        }
+
+        .seccion__preguntasFrecuentes--pagos {
+            width: 80%;
+
+            .section__preguntasFrecuentes__pagos--pregunta {
+                width: 100%;
+            }
+        }
+
+        .section__preguntasFrecuentes__polEnvios {
+            width: 80%;
+
+            .section__preguntasFrecuentes__polEnvios--preguntas {
+                width: 100%;
+            }
+        }
+
+        .section__preguntasFrecuentes--cambios {
+            width: 80%;
+
+            p {
+                width: 100%;
+            }
+        }
+    }
+
+
+    //Media pagina escritorio
+    .section__productos__contenedor__escritorio__biblioteca {
+
+        .contenedor__titulo--escritorio--biblioteca{
+            .titulo{
+                font-size: 65px;
+            }
+        }
+
+        .div__escritorio__biblioteca--texto {
+            width: 80%;
+
+            p{
+                font-size: 16px;
+            }
+        }
+
+        .contenedor__producto--escritorio--biblioteca {
+            width: 80%;
+
+            img {
+                width: 100%;
+                height: 70%;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
+
+
+
+//Media pagina Productos en tamaño tablet
+@media (min-width:768px) and (max-width:1300px) {
+
+    .section--producto {
+        .section--titulo {
+            color: #000;
+            font-size: 60px;
+        }
+
+        .section--contenedor {
+            display: flex;
+            flex-flow: column nowrap;
+
+            .section__contenedor--imagen {
+                width: 500px;
+                height: 700px;
+                margin: 50px;
+
+                &:hover {
+                    box-shadow: none;
+                    transform: none;
+                }
+
+                .section__contenedor--tiutlo {
+                    display: flex;
+                    flex-flow: column nowrap;
+
+                    p {
+                        font-size: 25px;
+                    }
+                }
+
+                img {
+                    width: 450px;
+                    height: 400px;
+                }
+
+                .comprar {
+                    font-size: 20px;
+                }
+
+                .agregarCarrito {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+
+
+//Media pagina Ubicación
+@media (min-width: 300px) and (max-width: 550px) {
+    .contenedor__ubicacion {
+        h1{
+            font-size: 70px;
+        }
+
+        .map {
+            height: 500px;
+        }
+
+        .ubicacion__titulo {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+}
